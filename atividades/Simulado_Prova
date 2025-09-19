@@ -1,0 +1,56 @@
+/*
+    Simulado para Prova
+*/
+
+/*
+Exercícios
+1) O que uma variável dinâmica armazena?
+R. Uma variável dinâmica armazena endereços de memória.
+
+2) Quais as modalidades ou comportamentos de Ponteiro foi estudado.
+
+Ponteiro Sentinela 
+São ponteiros que serve de referência para os demais ponteiros da estrutura. A merda deste Ponteiro acarreta na perda de toda a lista. 
+ 
+Ponteiro de Processamento 
+São ponteriso que auxiliam algumas operações atribuídas como (alocação de endereço, percorrer a lista, remover dados da lista) entre outras funcionalidades. São ponteiros que são frequentemente utilizadas nas operações; 
+
+Ponteiro de Estrutura 
+São ponteiros que fazem parte da struct permitindo o armazenamento do endereço neste campo.
+
+3) Dentre as linhas de comento descreva o comportamento:
+a) corrente = auxiliar->next
+R. Neste caso o ponteiro "corrente" irá para o dado a frente do ponteiro "auxliar".
+
+b) auxiliar=inicio
+R. Nesta situação o ponteiro "auxiliar" irá para o ponteiro sentinela denominado "inicio".
+
+c) auxiliar = auxiliar->next
+R. Nesta linha, o ponteiro "auxiliar" irá para o próximo dado alocado que onde o mesmo se encontra.
+
+4) Como ocorre alocação de endereço de memória aos ponteiros bem como acesso aos dados.
+R. A alocação de endereço de momória ocorre no tempo de execução através do comando malloc.
+
+5) Torne uma lista duplamente em circular
+R.
+*/
+fim->next=inicio
+inicio->back=fim
+/*
+6) Quais as operações são permitidas em listas.
+R. Inserir, remover, exibir, classificar
+
+7) Em que modelo de gerenciamento computacional encontramos em lista.
+R. O modelo de gerenciamento computacional com lista é encontrado no modelo de filas (queue), usado em sistemas operacionais e gerenciamento de processos, onde tarefas são organizadas em uma lista ordenada para execução sequencial ou prioritária.
+
+8) Em que operação aplica-se o sincronismo de ponteiro?
+R. Quando todos os ponteiros estão apontados para NULL.
+
+9) As listas estudadas são que tipos de oranização?
+R. Estrutura de dados dinâmicas.
+
+10) EOF refere-se a qual constante, aplicada ao ponteiro.
+R. EOF refere-se a NULL ou seje o último dado da lista sendo: pontiro -> next = NULL.
+
+
+*/
