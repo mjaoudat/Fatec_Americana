@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_PRODUTOS 100
+#define MAX_VENDAS 100
+
+typedef struct {
+    int id;
+    char nome[50];
+    int quantidade;
+    float preco;
+} Produto;
+
+typedef struct {
+    int id_produto;
+    int quantidade_vendida;
+    float valor_total;
+} Venda;
+
+Produto produtos[MAX_PRODUTOS];
+Venda vendas[MAX_VENDAS];
+int total_produtos = 0;
+int total_vendas = 0;
+
+void cadastrar_produto() {
+    if (total_produtos >= MAX_PRODUTOS) {
+        printf("Limite de produtos atingido.\n");
+        return;
+    }
+    Produto p;
+    p.id = total_produtos + 1;
+    printf("Nome do produto: ");
+    scanf(" %[^\n]", p.nome);
+    printf("Quantidade: ");
+    scanf("%d", &p.quantidade);
+    printf("Preco: ");
+    scanf("%f", &p.preco);
+    produtos[total_produtos++] = p;
+    printf("Produto cadastrado com sucesso!\n");
+}
+
+void consultar_produto() {
+    int id;
+    printf("ID do produto para consulta: ");
+    scanf("%d", &id);
+    for (int i = 0; i < total_produtos; i++) {
+        if (produtos[i].id == id) {
+            printf("ID: %d\nNome: %s\nQuantidade: %d\nPreco: %.2f\n",
+                   produtos[i].id, produtos[i].nome, produtos[i].quantidade, produtos[i].preco);
+            return;
+        }
+    }
+    printf("Produto nao encontrado.\n");
+}
+
+void baixa_venda() {
+    int id, qtd;
+    printf("ID do produto vendido: ");
+    scanf("%d", &id);
+    printf("Quantidade vendida: ");
+    scanf("%d", &qtd);
+    for (int i = 0; i < total_produtos; i++) {
+        if (produtos[i].id == id) {
+            if (produtos[i].quantidade >= qtd) {
+                produtos[i].quantidade -= qtd;
+                Venda v;
+                v.id_produto = id;
+                v.quantidade_vendida = qtd;
+                v.valor_total = produtos[i].preco * qtd;
+                vendas[total_vendas++] = v;
+                printf("Venda registrada!\n");
+            } else {
+                printf("Quantidade insuficiente em estoque.\n");
+            }
+            return;
+        }
+    }
+    printf("Produto nao encontrado.\n");
+}
+
+void relatorio_produtos() {
+    printf("Relatorio de Produtos:\n");
+    for (int i = 0; i < total_produtos; i++) {
+        printf("ID: %d | Nome: %s | Quantidade: %d | Preco: %.2f\n",
+               produtos[i].id, produtos[i].nome, produtos[i].quantidade, produtos[i].preco);
+    }
+}
+
+void relatorio_vendas() {
+    printf("Relatorio de Vendas:\n");
+    for (int i = 0; i < total_vendas; i++) {
+        printf("ID Produto: %d | Quantidade Vendida: %d | Valor Total: %.2f\n",
+               vendas[i].id_produto, vendas[i].quantidade_vendida, vendas[i].valor_total);
+    }
+}
+
+int main() {
+    int opcao;
+    do {
+        printf("\n[1] Cadastro de Produtos\n[2] Consulta\n[3] Baixa/Vendas\n[4] Relatorio de Produtos\n[5] Relatorio de Vendas\n[0] Sair\nOpcao: ");
+        scanf("%d", &opcao);
+        switch (opcao) {
+            case 1: cadastrar_produto(); break;
+            case 2: consultar_produto(); break;
+            case 3: baixa_venda(); break;
+            case 4: relatorio_produtos(); break;
+            case 5: relatorio_vendas(); break;
+            case 0: printf("Saindo...\n"); break;
+            default: printf("Opcao invalida.\n");
+        }
+    } while (opcao != 0);
+    return 0;
+}
