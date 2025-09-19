@@ -11,3 +11,10 @@ Desenvolva um vetor com 10 nomes. desenvolva um programa que faça a consulta ne
 ## Tecnologias
 - Linguagem: C
 - Code Block
+
+# Ativade 3 - Simulado da prova - 19/09/2025
+## Objetivo
+Responder as questões propostas pelo professor sobre o que foi estudado até o presente momento sobre Ponteiros, lista simplestente encadeada e duplamente encadeada. 
+## Tecnologias
+- Linguagem: C
+- VS CODE
