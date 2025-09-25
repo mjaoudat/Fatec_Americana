@@ -4,10 +4,10 @@ Como já informado anteriormente, o objetivo do aplicativo é o desenvolvimento 
 # Estrutura do projeto
 Ao realizar um pequeno diálogo com os integrantes do grupo, percebeu-se que seriam necessários os sequintes resquisitos:
 
-TELA LOGIN USUÁRIO - 
-	* E-email
-	* Senha
-	* Login com Google
+TELA LOGIN USUÁRIO
+	- E-email
+	- Senha
+	- Login com Google
 
 TELA REGISTRAR USUÁRIO -
 	* E-mail
