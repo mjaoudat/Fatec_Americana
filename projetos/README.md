@@ -5,3 +5,11 @@ Desenvolver um sistema de controle de estoque na qual tenha os requisitos de con
 - Linguagem C
 - VS Code
 - Code Block
+
+# Projeto 2 - App Adoção de Cachorros
+## Objetivo
+Desenvolver um apliativo com sobre um tema de preferência. Neste projeto foi escolhido o tema adoção de cachorros. Será desenvolvido em Kotlin, onde será testado o conhecimento em frontend, backend e banco de dados.
+## Ferramentas
+- Android Studio
+- VS CODE
+- Kotlin
