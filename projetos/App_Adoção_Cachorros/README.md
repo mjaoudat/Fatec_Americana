@@ -9,7 +9,7 @@ TELA LOGIN USUÁRIO
 - Senha
 - Login com Google
 
-TELA REGISTRAR USUÁRIO -
+TELA REGISTRAR USUÁRIO
 - E-mail
 - Senha
 - Confirmar Senha
