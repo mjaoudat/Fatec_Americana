@@ -18,3 +18,11 @@ Responder as questões propostas pelo professor sobre o que foi estudado até o 
 ## Tecnologias
 - Linguagem: C
 - VS CODE
+
+# Atividade 4 - Sistema de Vendas Multi-Filiais
+## Objetivo
+Utilzado da ferramenta Claude Ai para criar uma situação problema. No caso sendo ela:
+- Crie uma matriz onde linhas representam filiais e colunas representam produtos vendidos. Use struct para dados da filial (código, cidade, gerente). Salve dados mensais em arquivos separados e calcule totais e rankings.
+## Tecnolgias
+- Linguagem C
+- VS Code
