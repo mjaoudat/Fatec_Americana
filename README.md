@@ -39,7 +39,7 @@ fatec-ads/
 | # | Projeto | Linguagem | Status |
 |---|---------|-----------|--------|
 | 01 | [Controle de Estoque](semestre-4/estrutura-de-dados/projeto-01-controle-estoque/) | C | Concluído |
-| 02 | [Dog Adoption App](https://github.com/mjaoudat/dog-adoption-app) | Kotlin | Em desenvolvimento |
+
 
 ---
 
